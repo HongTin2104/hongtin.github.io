@@ -30,7 +30,7 @@ module.exports = [
   {
     resolve: 'gatsby-plugin-sitemap',
     options: {
-      output: '/sitemap',
+      output: '/sitemap.xml',
       excludes: ['/404', '/404.html'],
     },
   },
@@ -38,7 +38,7 @@ module.exports = [
     resolve: 'gatsby-plugin-robots-txt',
     options: {
       host: config.siteUrl,
-      sitemap: `${config.siteUrl}/sitemap/sitemap-index.xml`,
+      sitemap: `${config.siteUrl}/sitemap.xml`,
       policy: [{ userAgent: '*', allow: '/' }],
     },
   },

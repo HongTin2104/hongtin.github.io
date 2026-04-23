@@ -45,10 +45,12 @@ function SEO({
           path,
         );
         const profileImageUrl = `${Config.siteUrl}${Config.profileImage}`;
-        const metaImageUrl = Utils.resolveUrl(
-          Config.siteUrl,
-          imageUrl || data.file.childImageSharp.fixed.src,
-        );
+        const metaImageUrl = path === '/'
+          ? profileImageUrl
+          : Utils.resolveUrl(
+            Config.siteUrl,
+            imageUrl || data.file.childImageSharp.fixed.src,
+          );
 
         const personSchema = {
           '@context': 'https://schema.org',
@@ -85,10 +87,42 @@ function SEO({
           },
         };
 
+        const contactSchema = {
+          '@context': 'https://schema.org',
+          '@type': 'ContactPage',
+          name: `Contact ${Config.author}`,
+          url: `${Config.siteUrl}/contact`,
+          description: `Contact ${Config.author} for backend development and AI engineering opportunities.`,
+          image: profileImageUrl,
+          author: {
+            '@type': 'Person',
+            name: Config.author,
+            url: Config.siteUrl,
+          },
+        };
+
+        const resumeSchema = {
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: `Resume - ${Config.author}`,
+          url: `${Config.siteUrl}/resume`,
+          description: `Professional resume of ${Config.author}, Backend Developer specializing in Python, FastAPI and AI engineering.`,
+          image: profileImageUrl,
+          author: {
+            '@type': 'Person',
+            name: Config.author,
+            url: Config.siteUrl,
+          },
+        };
+
         const schema = [];
         if (path === '/') {
           schema.push(personSchema);
           schema.push(websiteSchema);
+        } else if (path === '/contact') {
+          schema.push(contactSchema);
+        } else if (path === '/resume') {
+          schema.push(resumeSchema);
         }
 
         return (
@@ -104,6 +138,14 @@ function SEO({
                   name: 'description',
                   content: description,
                 }, // Page description
+                {
+                  name: 'author',
+                  content: Config.author,
+                },
+                {
+                  name: 'robots',
+                  content: 'index, follow',
+                },
                 /* Open Graph */
                 {
                   property: 'og:title',
@@ -128,6 +170,14 @@ function SEO({
                 {
                   property: 'og:image:alt',
                   content: description,
+                },
+                {
+                  property: 'og:image:width',
+                  content: '1200',
+                },
+                {
+                  property: 'og:image:height',
+                  content: '630',
                 },
                 {
                   property: 'og:site_name',

@@ -33,7 +33,7 @@ const Contact = () => (
           <Col sm={24} md={24} lg={12}>
             <img
               src="../../contact.png"
-              alt="contact"
+              alt="Contact Nguyễn Hồng Tín"
               className="widthFull contactImgBorder"
             />
           </Col>

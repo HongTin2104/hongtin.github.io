@@ -12,7 +12,7 @@ const NAV_LINKS = [
 ];
 
 const RESUME_LINK = {
-  href: '/resume.pdf',
+  to: '/resume',
   label: 'Resume',
 };
 
@@ -60,12 +60,13 @@ const Header = () => {
               </li>
             ))}
             <li className={style.navItem}>
-              <a
-                href={RESUME_LINK.href}
-                download="resume.pdf"
+              <Link
+                to={RESUME_LINK.to}
+                onClick={toggleMenu}
+                activeClassName={style.anchorActive}
               >
                 {RESUME_LINK.label}
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

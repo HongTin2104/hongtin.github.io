@@ -1,0 +1,39 @@
+@import (reference) '../../../styles/index.less';
+
+.statsContainer {
+    margin-top: 2rem;
+}
+
+.statCard {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.statCardFull {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .statCard,
+    .statCardFull {
+        margin-bottom: 1rem;
+    }
+}

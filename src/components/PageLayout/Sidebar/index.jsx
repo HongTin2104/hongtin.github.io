@@ -7,14 +7,12 @@ import { globalHistory } from '@reach/router';
 import style from './sidebar.module.less';
 import { useWindowSize } from '../../../utils/hooks';
 import Config from '../../../../config';
-import icon from '../../../images/icon.svg';
 
 const { Content } = Layout;
 const {
   facebook,
   github,
   globe,
-  twitter,
   tiktok,
   linkedin,
 } = Config.social;
@@ -25,15 +23,6 @@ const DomContent = () => (
     <div className={`${style.name} centerAlign`}>
       <div className={`${style.boxName} centerAlign`}>
         <h2>
-          <img
-            src={icon}
-            style={{
-              width: 32,
-            }}
-            alt="VL Logo"
-          />
-          {' '}
-          {' '}
           <span>Nguyễn Hồng Tín</span>
         </h2>
       </div>
@@ -52,11 +41,6 @@ const DomContent = () => (
         <a href={facebook} target="_blank" label="button" rel="noopener noreferrer">
           <FA
             name="facebook-f"
-          />
-        </a>
-        <a href={twitter} target="_blank" label="button" rel="noopener noreferrer">
-          <FA
-            name="twitter"
           />
         </a>
         <a href={linkedin} target="_blank" label="button" rel="noopener noreferrer" className="hover-grow">

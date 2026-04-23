@@ -12,7 +12,7 @@ const NAV_LINKS = [
 ];
 
 const RESUME_LINK = {
-  href: 'https://drive.google.com/file/d/1P9xZj1EU45KAkJMrci8sSaVgbsk9g789/view',
+  href: '/resume.pdf',
   label: 'Resume',
 };
 
@@ -62,8 +62,7 @@ const Header = () => {
             <li className={style.navItem}>
               <a
                 href={RESUME_LINK.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                download="resume.pdf"
               >
                 {RESUME_LINK.label}
               </a>

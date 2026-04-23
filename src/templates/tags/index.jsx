@@ -22,7 +22,7 @@ const TagPage = ({ data, pageContext }) => {
     .childImageSharp.fluid;
   const posts = data.allMarkdownRemark.edges;
   return (
-    <Layout className="outerPadding full-height-layout">
+    <Layout className="outerPadding">
       <Layout className="container">
         <Header />
         <SEO

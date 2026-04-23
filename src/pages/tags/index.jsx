@@ -20,7 +20,7 @@ const Tags = ({ data }) => {
   // const tagPage = Config.pages.tag;
   const tagData = Config.tags;
   return (
-    <Layout className="outerPadding full-height-layout">
+    <Layout className="outerPadding">
       <Layout className="container">
         <Header />
         <SEO

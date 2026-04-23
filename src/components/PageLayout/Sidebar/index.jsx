@@ -85,7 +85,11 @@ const Sidebar = (props) => {
   const { pathname } = globalHistory.location;
   let domContent = <DomContent />;
   if (width > 997) {
-    domContent = <DomContent />;
+    domContent = (
+      <Affix offsetTop={0}>
+        <DomContent />
+      </Affix>
+    );
   }
   if (width < 768) {
     domContent = <></>;
@@ -95,10 +99,10 @@ const Sidebar = (props) => {
   }
   return (
     <>
-      <Layout className={style.sidebarLayout}>
+      <Layout>
         <Content className={`${style.content} ${style.background}`}>
           <Row>
-            <Col sm={24} md={9} lg={6} className={`${style.sidebarContent} animate-fade-in-up`}>
+            <Col sm={24} md={9} lg={6} className={`${style.sidebarContent} animate-fade-in-up`} style={{ position: 'sticky', top: '20px', height: 'fit-content' }}>
               {domContent}
             </Col>
             <Col sm={24} md={15} lg={18} className={style.mainContent}>

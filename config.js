@@ -23,7 +23,7 @@ module.exports = {
   },
   social: {
     github: 'https://github.com/HongTin2104',
-    facebook: 'https://www.facebook.com/nguyentin2104',
+    facebook: 'https://www.facebook.com/hongtin2104',
     twitter: '',
     instagram: '',
     globe: siteUrl,

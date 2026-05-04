@@ -13,5 +13,5 @@ Experienced in feature delivery, system optimization, and AI-integrated solution
 
 - GitHub: https://github.com/HongTin2104
 - LinkedIn: https://www.linkedin.com/in/tin-hong-nguyen-0b442029b/
-- Facebook: https://www.facebook.com/nguyentin2104
+- Facebook: https://www.facebook.com/hongtin2104
 - Email: hongtin2104@gmail.com

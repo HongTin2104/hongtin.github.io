@@ -28,7 +28,7 @@ module.exports = {
     instagram: '',
     globe: siteUrl,
     tiktok: '',
-    linkedin: 'https://www.linkedin.com/in/tin-hong-nguyen-0b442029b/',
+    linkedin: 'https://www.linkedin.com/in/hongtin2104/',
   },
   contactFormUrl: process.env.CONTACT_FORM_ENDPOINT || 'https://getform.io/f/09a3066f-c638-40db-ad59-05e4ed71e451', // TODO
   googleAnalyticTrackingId: process.env.GA_TRACKING_ID || '',

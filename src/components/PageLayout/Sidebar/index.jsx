@@ -35,7 +35,8 @@ const DomContent = () => (
           <span>Nguyễn Hồng Tín</span>
         </h2>
       </div>
-      <div className={`${style.badge} ${style.badgeGray}`}>Backend Developer & AI Engineer</div>
+      <div className={`${style.badge} ${style.badgeGray}`}>Backend Developer</div>
+      <div className={`${style.badge} ${style.badgeGray}`}>AI Engineer</div>
       <div className="centerAlign box">
         <a href={globe} target="_blank" label="button" rel="noopener noreferrer" className="hover-grow" title="Nguyễn Hồng Tín Personal Portfolio Website" aria-label="Nguyễn Hồng Tín Personal Portfolio Website">
           <FA

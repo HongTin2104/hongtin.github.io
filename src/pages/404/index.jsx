@@ -3,7 +3,7 @@ import { Layout } from 'antd';
 import { Link, graphql } from 'gatsby';
 import Header from '../../components/PageLayout/Header';
 import style from './404.module.less';
-
+import SEO from '../../components/Seo';
 import { Sidebar404 } from '../../components/PageLayout/Sidebar';
 
 export const query = graphql`
@@ -20,6 +20,12 @@ export const query = graphql`
 
 export default ({ data }) => (
   <Layout className="outerPadding">
+    <SEO
+      title="404: Page Not Found"
+      description="The page you are looking for does not exist."
+      path="/404"
+      noindex={true}
+    />
     <Layout className="container">
       <Header />
       <Sidebar404>

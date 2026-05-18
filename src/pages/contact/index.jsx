@@ -9,7 +9,7 @@ const Contact = () => (
   <Layout className="outerPadding">
     <Layout className="container">
       <SEO
-        title="Contact Nguyễn Hồng Tín"
+        title="Contact"
         description="Contact Nguyễn Hồng Tín for backend development, AI engineering, or collaboration opportunities."
         path="/contact"
         keywords={[

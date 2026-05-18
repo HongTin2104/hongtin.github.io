@@ -12,7 +12,7 @@ module.exports = {
   siteTitle: 'Nguyễn Hồng Tín',
   siteDescription: 'Nguyễn Hồng Tín - Backend Developer & AI Engineer from Ho Chi Minh City. Specializing in Python, FastAPI, LangChain, LLM, and RAG systems. Building reliable APIs and AI-powered products.',
   author: 'Nguyễn Hồng Tín',
-  profileImage: '/hongtin2104.png',
+  profileImage: '/hongtin2104.jpg',
   titleTemplate: 'Nguyễn Hồng Tín | Backend Developer & AI Engineer',
   defaultLanguage: 'en',
   disqusScript: process.env.DISQUS_SCRIPT || '',

@@ -9,7 +9,7 @@ export default function Resume() {
     <Layout className="outerPadding">
       <Layout className="container">
         <SEO
-          title="Resume | Nguyễn Hồng Tín"
+          title="Resume"
           description="Professional resume of Nguyễn Hồng Tín, Backend Developer specializing in Python and FastAPI."
           path="/resume"
         />

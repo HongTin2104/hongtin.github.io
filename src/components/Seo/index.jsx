@@ -28,6 +28,7 @@ function SEO({
   contentType,
   imageUrl,
   meta,
+  noindex,
 }) {
   return (
     <StaticQuery
@@ -56,7 +57,7 @@ function SEO({
           '@context': 'https://schema.org',
           '@type': 'Person',
           name: Config.author,
-          alternateName: 'Nguyen Hong Tin',
+          alternateName: ['Nguyen Hong Tin', 'Nguyễn Hồng Tín', 'hongtin2104'],
           url: Config.siteUrl,
           jobTitle: 'Backend Developer',
           gender: 'Male',
@@ -133,7 +134,7 @@ function SEO({
         return (
           <Helmet
             htmlAttributes={{
-              lang: lang || 'vi',
+              lang: lang || Config.defaultLanguage || 'en',
             }}
             title={title} // Page title
             titleTemplate={path === '/' ? '%s' : `%s | ${Config.siteTitle}`}
@@ -149,7 +150,7 @@ function SEO({
                 },
                 {
                   name: 'robots',
-                  content: 'index, follow',
+                  content: noindex ? 'noindex, nofollow' : 'index, follow',
                 },
                 {
                   name: 'google-site-verification',
@@ -194,7 +195,7 @@ function SEO({
                 },
                 {
                   property: 'og:locale',
-                  content: lang || 'vi_VN',
+                  content: lang === 'vi' ? 'vi_VN' : 'en_US',
                 },
                 /* Twitter card */
                 {
@@ -262,14 +263,16 @@ SEO.propTypes = {
       content: PropTypes.string.isRequired,
     }),
   ),
+  noindex: PropTypes.bool,
 };
 
 SEO.defaultProps = {
-  lang: 'vi',
+  lang: 'en',
   contentType: 'website',
   imageUrl: null,
   keywords: [],
   meta: [],
+  noindex: false,
 };
 
 export default SEO;
